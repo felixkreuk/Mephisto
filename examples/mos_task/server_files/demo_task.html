@@ -1,0 +1,130 @@
+<!-- Bootstrap v3.0.3 -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Modal --><!-- MODAL -->
+
+<div
+  aria-hidden="true"
+  aria-labelledby="exampleModalLabel"
+  class="modal fade in"
+  id="exampleModal"
+  role="dialog"
+  tabindex="-1"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          aria-label="Close"
+          class="close"
+          data-dismiss="modal"
+          type="button"
+        >
+          <span aria-hidden="true"> &times; </span>
+        </button>
+      </div>
+
+      <div class="modal-body" id="modal">&nbsp;</div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-dismiss="modal" type="button">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+
+<section
+  class="container"
+  id="Other"
+  style="
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.9em;
+  "
+>
+  <div class="row col-xs-12 col-md-12">
+    <!-- Instructions -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <strong> Instructions </strong>
+      </div>
+
+      <div class="panel-body" id="instructions">
+        <p>
+        In this task, after you listen to each sentence, 
+        you will choose a score for the audio file you've just heard.
+        This score should reflect your opinion of how natural or
+        unnatural the speech sounded. Note that the content of
+        the sentence should not be judged.
+        Then choose a score for how natural or unnatural the
+        sentence sounded. 
+        <br><br>
+        <strong>The scale is from 1 [Completely unnatural]
+        to 5 [Completely natural] and goes up in 0.5 increments.</strong>
+        </p>
+      </div>
+    </div>
+    <!-- End Instructions -->
+    <!-- Content Body -->
+
+    <div class="input_location">
+      <p>
+      <strong> Rate the naturalness of this audio file: </strong><br>
+        <audio controls>
+          <source src=${audio_url} type="audio/wav">
+        Your browser does not support the audio element.
+        </audio>
+      </p>
+    </div>
+
+    <section>
+      <fieldset>
+        <div class="input-group">
+          [1 <input type="radio" name="score" value="1">]&nbsp;&nbsp;&nbsp;
+          [1.5 <input type="radio" name="score" value="1.5">]&nbsp;&nbsp;&nbsp;
+          [2 <input type="radio" name="score" value="2">]&nbsp;&nbsp;&nbsp;
+          [2.5 <input type="radio" name="score" value="2.5">]&nbsp;&nbsp;&nbsp;
+          [3 <input type="radio" name="score" value="3">]&nbsp;&nbsp;&nbsp;
+          [3.5 <input type="radio" name="score" value="3.5">]&nbsp;&nbsp;&nbsp;
+          [4 <input type="radio" name="score" value="4">]&nbsp;&nbsp;&nbsp;
+          [4.5 <input type="radio" name="score" value="4.5">]&nbsp;&nbsp;&nbsp;
+          [5 <input type="radio" name="score" value="5">]&nbsp;&nbsp;&nbsp;
+          <input type="hidden" id="audio_url" name="audio_url" value=${audio_url}>
+          <input type="hidden" id="model" name="model" value=${model}>
+        </div>
+      </fieldset>
+    </section>
+    <!-- End Content Body -->
+  </div>
+</section>
+
+<script>
+  $(function () {
+    modal_body = $("#modal");
+    $("#instructions").clone().appendTo(modal_body);
+    $(".modal").modal("show");
+  });
+</script>
+
+<style type="text/css">
+  fieldset {
+    padding: 10px;
+    background: #fbfbfb;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .input_location {
+    background-color: blanchedalmond;
+    padding: 10px;
+  }
+</style>

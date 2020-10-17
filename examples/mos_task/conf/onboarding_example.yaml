@@ -1,0 +1,16 @@
+#@package _global_
+mephisto:
+  blueprint:
+    data_csv: ${task_dir}/data.csv
+    task_source: ${task_dir}/server_files/demo_task.html
+    preview_source: ${task_dir}/server_files/demo_preview.html
+    extra_source_dir: ${task_dir}/server_files/extra_refs
+    onboarding_source: ${task_dir}/server_files/demo_onboarding.html
+    onboarding_qualification: mos_qualification
+    units_per_assignment: 1
+  task:
+    task_name: mos_test
+    task_title: "Audio Mean Opinion Score Test"
+    task_description: "Score the naturalness of an audio file"
+    task_reward: 0.1
+    task_tags: "audio,mos"

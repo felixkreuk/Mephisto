@@ -1,0 +1,109 @@
+<!-- Bootstrap v3.0.3 -->
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Modal --><!-- MODAL -->
+<!-- Content -->
+
+<section
+  class="container"
+  id="Other"
+  style="
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.9em;
+  "
+>
+  <div class="row col-xs-12 col-md-12">
+    <!-- Instructions -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <strong> Instructions </strong>
+      </div>
+
+      <div class="panel-body" id="instructions">
+        <p>
+        Hello and welcome,<br>
+        Before was begin the task, please fill-in the following information:
+        </p>
+      </div>
+    </div>
+    <!-- End Instructions -->
+    <!-- Content Body -->
+
+    <div class="input_location">
+      <p>
+        <strong> What is your output audio device? </strong>
+      </p>
+    </div>
+    <section>
+      <fieldset>
+        <div class="input-group">
+          <select class="form-control" name="audio_device">
+            <option selected="selected" value="">(select one)</option>
+            <option value="headphones">Headphones</option>
+            <option value="speakers">Speakers</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+    </section>
+
+    <div class="input_location">
+      <p>
+        <strong> What is your age? </strong>
+      </p>
+    </div>
+    <section>
+      <fieldset>
+        <div class="input-group">
+          <select class="form-control" name="age">
+            <option selected="selected" value="">(select one)</option>
+            <option value="less_21">Under 21</option>
+            <option value="21_41">21-41</option>
+            <option value="42_61">41-21</option>
+            <option value="more_62">Over 62</option>
+          </select>
+        </div>
+      </fieldset>
+    </section>
+
+    <div class="input_location">
+      <p>
+        <strong> What is your education? </strong>
+      </p>
+    </div>
+    <section>
+      <fieldset>
+        <div class="input-group">
+          <select class="form-control" name="education">
+            <option selected="selected" value="">(select one)</option>
+            <option value="elementay">Elementary</option>
+            <option value="highschool">High school</option>
+            <option value="college">College and above</option>
+          </select>
+        </div>
+      </fieldset>
+    </section>
+
+    <!-- End Content Body -->
+  </div>
+</section>
+
+<style type="text/css">
+  fieldset {
+    padding: 10px;
+    background: #fbfbfb;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .input_location {
+    background-color: blanchedalmond;
+    padding: 10px;
+  }
+</style>
